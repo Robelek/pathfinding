@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title> Pathfinding </title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="index.js" defer> </script>
+  </head>
+  <body>
+    <h1> Pathfinding </h1>
+    <div class="main-container">
+      <form onsubmit="newGrid(event)" id="grid-form">
+        <div>
+          <label for="xSize"> xSize</label>
+          <input id="xSize" name="xSize" type="number" required/>
+           </div>
+              <div>
+          <label for="ySize"> ySize</label>
+          <input id="ySize" name="ySize" type="number" required/>
+           </div>
+        <button> create new grid </button>
+      </form> 
+      <div class="selectContainer">
+        <button class ="button current" value="test" onclick="changeMode(this)"> TEST </button>
+          <button class ="button" value="start" onclick="changeMode(this)"> START </button>
+            <button class="button" value="end" onclick="changeMode(this)"> END </button>
+              <button class= "button" value="obstacle" onclick="changeMode(this)"> OBSTACLE </button>
+       
+      </div>
+      <div class="grid-container">
+        <div class="tile" onclick="tileClick(this)">
+          <div class="cost gCost"> 0 </div>
+          <div class="cost hCost"> 0 </div>
+          <div class="cost fCost"> 0 </div>
+        </div>
+      </div>
+      <button onclick="findPath()"> run algorithm </button>
+    </div>
+  </body>
+</html>

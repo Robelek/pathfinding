@@ -1,0 +1,127 @@
+:root
+{
+  --bgcolor: #2F2F2F;
+  --primary: #4D4D4D;
+  --special: #FFC700;
+  
+  --tile: #3a435e;
+  --path:#09bc8a;
+  --start: #FFC700;
+  --end: #FFF;
+  --obstacle: black;
+ /* --path: #baff29;*/
+  
+}
+
+body
+{
+  margin:0;
+  background-color: var(--bgcolor);
+  color:white;
+}
+body > h1
+{
+  text-align: center;
+  font-size: 2.5rem;
+}
+.main-container
+{
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  align-items: center;
+  width:fit-content;
+}
+.main-container > form
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+  padding: 0.3rem;
+  margin-bottom:0.5rem;
+}
+.main-container > form > button
+{
+  grid-column: 1/span 2;
+  width:fit-content;
+  margin-left:auto;
+  margin-right:auto;
+  transition: 0.5s;
+}
+
+.main-container > form > button:active
+{
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+input[type="number"]
+{
+ background-color: white;
+ width: 5rem;
+}
+.tile
+{
+  background-color: var(--tile);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:0.2rem;
+  padding:0.2rem;
+  width:3rem;
+  height:3rem;
+  
+  border: 1px solid black;
+}
+.tile.path
+{
+  background-color: var(--path);
+}
+.tile.start
+{
+  background-color: var(--start);
+}
+.tile.end
+{
+  background-color: var(--end);
+}
+.tile.obstacle
+{
+  background-color: var(--obstacle);
+}
+.cost
+{
+  text-align: center;
+}
+.cost.fCost
+{
+  grid-column: 1/span 2;
+  font-size: 1.5rem;
+}
+.grid-container
+{
+  display:grid;
+  margin-top:1rem;
+}
+.selectContainer
+{
+  display:flex;
+  justify-content: space-between;
+  gap:0.5rem;
+}
+.selectContainer > button
+{
+  transition: 0.2s;
+  
+}
+.selectContainer > button.current
+{
+  transform: scale(1.2);
+  transition: 0.2s;
+  background-color: var(--special);
+  
+}
+.main-container > button
+{
+  margin: 0.5rem 0;
+}
